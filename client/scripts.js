@@ -13,7 +13,7 @@ async function handleLogin(event) {
     const messageElement = document.getElementById('login-message');
 
     try {
-        const response = await fetch('http://localhost:5000/api/login', {
+        const response = await fetch('https://dashboard-backend-ibe9.onrender.com/api/login', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ username, password }),
@@ -111,7 +111,7 @@ async function renderDashboard() {
     }
 
     try {
-        const response = await fetch('http://localhost:5000/api/dashboard-data', {
+        const response = await fetch('https://dashboard-backend-ibe9.onrender.com/api/dashboard-data', {
             headers: {
                 'Authorization': `Bearer ${token}`,
             },
