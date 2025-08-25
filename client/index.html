@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Dashboard</title>
+    <!-- Link to the external stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Login Page -->
+    <div id="login-page" class="container">
+        <div class="card">
+            <h1>Welcome</h1>
+            <p>Sign in to view the dashboard.</p>
+            <div id="login-message" class="message hidden error"></div>
+            <form id="login-form">
+                <div class="input-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" placeholder="testuser" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="password123" required>
+                </div>
+                <button type="submit" class="btn-primary">Log In</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Dashboard Page -->
+    <div id="dashboard-page" class="dashboard-container hidden">
+        <header class="dashboard-header">
+            <h1>Interactive Dashboard</h1>
+            <button id="logout-btn" class="btn-logout">Logout</button>
+        </header>
+
+        <div class="dashboard-content">
+            <div class="filters">
+                <label for="country-filter">Filter by Country:</label>
+                <select id="country-filter"></select>
+            </div>
+            
+            <div class="chart-grid">
+                <!-- Chart 1 -->
+                <div class="chart-card">
+                    <h3>Population Growth (%)</h3>
+                    <canvas id="population-chart"></canvas>
+                </div>
+                
+                <!-- Chart 2 -->
+                <div class="chart-card">
+                    <h3>GDP per Capita ($)</h3>
+                    <canvas id="gdp-chart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script Imports -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>

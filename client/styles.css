@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap');
+
+:root {
+    --primary-color: #5B21B6; /* A deep, rich purple */
+    --primary-dark-color: #4C1D95; /* A darker purple for hover states */
+    --secondary-color: #059669; /* A vibrant green */
+    --secondary-dark-color: #047857; /* A darker green */
+    --background-color: #F3F4F6; /* A soft, light gray */
+    --surface-color: #ffffff; /* Pure white for cards */
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --text-color: #111827; /* Dark gray for main text */
+    --light-text-color: #6B7280; /* Lighter gray for secondary text */
+    --chart-surface-color: #E5E7EB; /* A slightly darker gray for chart backgrounds */
+    --border-color: #D1D5DB; /* A light gray for borders */
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background: linear-gradient(135deg, #E0E7FF, #C4B5FD); /* A subtle gradient background */
+}
+
+.card {
+    background-color: var(--surface-color);
+    border-radius: 1.5rem;
+    box-shadow: 0 20px 25px -5px var(--shadow-color), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    padding: 2.5rem;
+    width: 100%;
+    max-width: 28rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 25px 35px -8px rgba(0, 0, 0, 0.15), 0 12px 15px -6px rgba(0, 0, 0, 0.08);
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 900;
+    text-align: center;
+    color: var(--primary-dark-color);
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.025em;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+}
+
+p {
+    text-align: center;
+    color: var(--light-text-color);
+    margin-bottom: 2rem;
+}
+
+.input-group {
+    margin-bottom: 1.5rem;
+}
+
+/* Updated styles for better alignment */
+.input-group label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+    text-align: left; /* Ensures labels are left-aligned */
+}
+
+.input-group input, .input-group select {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+    border: 2px solid var(--border-color);
+    border-radius: 1rem;
+    background-color: var(--background-color);
+    outline: none;
+    transition: all 0.3s ease-in-out;
+    color: var(--text-color);
+    box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
+}
+
+.input-group input:focus, .input-group select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(91, 33, 182, 0.2);
+}
+
+button {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    border: none;
+    border-radius: 9999px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.btn-primary {
+    background: var(--primary-color);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dark-color);
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-logout {
+    background-color: #EF4444; /* A soft red */
+    color: white;
+    padding: 0.75rem 2rem;
+    width: auto;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.btn-logout:hover {
+    background-color: #DC2626; /* A darker red */
+    transform: translateY(-2px);
+}
+
+.message {
+    padding: 1rem;
+    border-radius: 0.75rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.message.error {
+    background-color: #FEE2E2;
+    color: #991B1B;
+    border: 1px solid #FCA5A5;
+}
+
+.hidden {
+    display: none;
+}
+
+.dashboard-container {
+    padding: 3rem 2rem;
+    background-color: var(--background-color);
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+
+.dashboard-header h1 {
+    text-align: left;
+    margin: 0;
+    font-size: 3.5rem;
+    flex-grow: 1;
+    letter-spacing: -0.05em;
+}
+
+.dashboard-content {
+    background-color: var(--surface-color);
+    border-radius: 1.5rem;
+    box-shadow: 0 20px 25px -5px var(--shadow-color), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    padding: 2.5rem;
+}
+
+.filters {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.chart-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+/* Set a fixed height for chart containers */
+.chart-card {
+    background-color: var(--chart-surface-color);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    height: 400px; /* Adjusted height for better look */
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+    border: 1px solid var(--border-color);
+}
+
+@media (min-width: 768px) {
+    .chart-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .chart-card {
+        height: 450px; /* Slightly taller on desktop */
+    }
+}
+
+.chart-card:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.15), 0 4px 6px -2px rgba(0, 0, 0, 0.08);
+    transform: translateY(-3px);
+}
+
+.chart-card h3 {
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: #475569;
+}
+
+/* Ensure the canvas element fills its parent */
+.chart-card canvas {
+  display: block;
+  width: 100% !important;
+  height: calc(100% - 2.5rem - 1.5rem - 24px - 16px) !important; /* Adjusted to fill remaining space */
+}
