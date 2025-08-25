@@ -4,9 +4,9 @@ This is a full-stack web application that displays an interactive data dashboard
 
 ## Deployed Application
 
-[Live Url]()
+[Live Url](https://dashboard-project-f5u7.onrender.com)
 
-[Github Repo]()
+[Github Repo](https://github.com/asthaade/dashboard_project)
 
 ## Technologies Used
 
