@@ -36,7 +36,7 @@ This is a full-stack web application that displays an interactive data dashboard
 
 - **Dynamic Data:** All chart data is dynamically fetched from a Node.js backend API, which in turn retrieves real-time data from the World Bank Open Data API.
 - **bcryptjs:** Used to securely hash user passwords.
-- **Data Filtering:**The dashboard includes a filter that allows the user to select and view data for different countries (USA, China, and India).
+- **Data Filtering:** The dashboard includes a filter that allows the user to select and view data for different countries (USA, China, and India).
 
 ## Setup Instructions
 
